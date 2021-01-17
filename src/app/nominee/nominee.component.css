@@ -1,0 +1,31 @@
+.poster{
+    width:50px;
+}
+
+.title{
+
+    font-size: 13px;
+    font-weight: 500;
+    color: #24292e;
+}
+
+.year{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.container{
+    margin:10px
+}
+
+.delete-button{
+    border-color: #24292e;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    color: #24292e;
+}
+
+.delete-button:hover { 
+    background-color:#ececec;
+}

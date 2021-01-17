@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div style="width: 60px">
+            <img class="poster" src="{{movie.poster}}" onerror="this.src='../../assets/default-movie.png';">
+        </div>
+        <div class="col-sm">
+            <a class="row title" target="_blank" href="{{getMovieSite(movie.id)}}">{{movie.title}}</a>
+            <div class="row year">{{movie.year}}</div>
+        </div>
+        <div class="col-sm">
+            <button (click)="deleteMovie(movie.id)" class="delete-button">
+                <i class="bi bi-x-circle-fill"></i>
+                Delete
+            </button>
+        </div>
+    </div>
+</div>

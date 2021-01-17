@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div style="width: 60px">
+            <img class="poster" src="{{movie.poster}}" onerror="this.src='../../assets/default-movie.png';">
+        </div>
+        <div class="col-sm">
+            <a class="row title" target="_blank" href="{{getMovieSite(movie.id)}}">{{movie.title}}</a>
+            <div class="row year">{{movie.year}}</div>
+        </div>
+        <div class="col-sm">
+            <button *ngIf="!isMovieNominated(movie.id)" (click)="nominateMovie(movie)" class="nominate-button">
+                <i class="bi bi-trophy-fill"></i>
+                Nominate
+            </button>
+        </div>
+    </div>
+</div>
