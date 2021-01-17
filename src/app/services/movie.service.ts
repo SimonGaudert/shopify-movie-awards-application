@@ -8,7 +8,7 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 })
 export class MovieService {
 
-  private url = "http://www.omdbapi.com";
+  private url = "https://www.omdbapi.com";
   private apiKey = "5b0340b3"; // Stored here for ease of use. Ideally this would not be stored here.
   private mediaType = "movie"; //We only want movies
 
