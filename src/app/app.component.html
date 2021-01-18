@@ -1,13 +1,11 @@
 <!-- Toolbar -->
-<div class="nav-bar" role="banner">
-  <div class="container">
-    <h2>The Shoppies</h2>
+<div class="nav-bar d-flex">
+  <div class="container d-flex justify-content-center align-items-center">
+    <img class="banner-logo " src="../assets/shoppies-logo.png">
   </div>
-
 </div>
 
-<div class="content" role="main">
-
+<div class="content">
   <div class="container">
     <div class="row">
       <div class="col-sm">
@@ -19,6 +17,15 @@
               [(ngModel)]="searchField">
           </div>
         </form>
+        
+        <div style="margin-top: 60px;" class="container" *ngIf="searchResults.length == 0">
+          <div class="row d-flex justify-content-center">
+            <i class="no-movies-icon glyphicon bi bi-search"></i>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <h4 class="no-movies-text">Start typing to search for potential nominees.</h4>
+          </div>
+        </div>
 
         <div *ngFor="let movie of searchResults">
           <app-search-result (movieNominatedEvent)="handleMovieNominatedEvent($event)" [movie]="movie" [nominees]="nominees"></app-search-result>
@@ -28,6 +35,18 @@
       </div>
       <div class="col-sm">
         <h2>Nominees</h2>
+        <p>Nomination Completion:</p>
+        <p><ngb-progressbar type="success" textType="white" [value]="getNominationPercentage()" [showValue]="true"></ngb-progressbar></p>
+
+        <div style="margin-top: 60px;" class="container" *ngIf="nominees.length == 0">
+          <div class="row d-flex justify-content-center">
+            <i class="no-movies-icon glyphicon bi bi-trophy"></i>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <h4 class="no-movies-text">Nominate 5 movies.</h4>
+          </div>
+        </div>
+
         <div *ngFor="let movie of nominees">
           <app-nominee (movieDeletedEvent)="handleMovieDeletedEvent($event)" [movie]="movie"></app-nominee>
           <hr>

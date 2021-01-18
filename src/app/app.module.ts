@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { NomineeComponent } from './nominee/nominee.component';
+import {CookieService} from 'ngx-cookie-service'
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { NomineeComponent } from './nominee/nominee.component';
     BrowserAnimationsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

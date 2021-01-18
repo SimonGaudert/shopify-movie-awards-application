@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 140px;
     display: flex;
     align-items: center;
     background-color: #efece3;
@@ -11,9 +11,25 @@
     font-weight: 600;
 }
 
+.banner-logo{
+  max-width: 216px; 
+  max-height: 120px;
+  background-color: transparent;
+  margin:auto;
+}
+
 .search-container{
   background-color:#888 ;
   border-radius: 15px;
+}
+
+.no-movies-text{
+  color: #aeb0b3;
+}
+
+.no-movies-icon{
+  font-size: 150px;
+  color: #aeb0b3;
 }
 
 /* enable absolute positioning */
@@ -96,7 +112,7 @@ p {
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
+  margin: 160px auto 32px;
   padding: 0 16px;
   max-width: 960px;
   flex-direction: column;
